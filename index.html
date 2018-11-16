@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="index.css"> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    <div id='game'>
+        <input v-on:keyup.up="moveUp" v-on:keyup.down="moveDown" v-on:keyup.left="moveLeft" v-on:keyup.right="moveRight">
+        <div 
+            v-bind:style="{ backgroundColor: foodColor, position: divPosition, left: foodLocationX + 'px', top: foodLocationY + 'px' }">FOOD
+        </div>
+        <div 
+            v-bind:style="{ backgroundColor: divColor, position: divPosition, left: locationX + 'px', top: locationY + 'px' }">/-_-/
+        </div>
+        
+        <div >{{ userScore }}</div>
+    </div>
+            
+        <script src="index.js"></script>
+    </body>
+</html>
