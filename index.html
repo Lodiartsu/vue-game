@@ -1,18 +1,27 @@
+<meta charset="utf-8"/>
 <html>
     <title>I'm hungry</title>
     <head>
         <!-- <link rel="stylesheet" href="index.css"> -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
-    <body>
+    <body style="background: teal">
     <div id='game'>
-        <input v-on:keyup.up="moveUp" v-on:keyup.down="moveDown" v-on:keyup.left="moveLeft" v-on:keyup.right="moveRight">
+        <input type="hidden"
+            v-on:keyup.up="moveUp" 
+            v-on:keyup.down="moveDown" 
+            v-on:keyup.left="moveLeft"
+            v-on:keyup.right="moveRight"
+        >
         <div 
-            v-bind:style="{ backgroundColor: foodColor, position: divPosition, left: foodLocationX + 'px', top: foodLocationY + 'px' }">FOOD
+            v-bind:style="{ position: divPosition, left: foodLocationX + 'px', top: foodLocationY + 'px' }">
+            {{ food }}
         </div>
-        <img src="me.png" 
-            v-bind:style="{ backgroundColor: divColor, position: divPosition, left: locationX + 'px', top: locationY + 'px' }">/-_-/
-        </img>
+        <div id='face'
+            v-bind:style="{ position: divPosition, left: locationX + 'px', top: locationY + 'px' }">
+            {{ face }}
+        </div>
+        
         <div >{{ userScore }}</div>
     </div>
             
