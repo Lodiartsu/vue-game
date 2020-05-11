@@ -13,8 +13,8 @@
             v-on:keyup.right="moveRight"
         >
         <div 
-            v-bind:style="{ position: divPosition, left: foodLocationX + 'px', top: foodLocationY + 'px' }">
-            {{ food }}
+            v-bind:style="{ position: divPosition, left: goalLocationX + 'px', top: goalLocationY + 'px' }">
+            {{ goal }}
         </div>
         <div id='face'
             v-bind:style="{ position: divPosition, left: locationX + 'px', top: locationY + 'px' }">
